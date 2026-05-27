@@ -15,11 +15,11 @@ const Contact = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start"
+        className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start transform-gpu will-change-transform"
       >
         <div>
           <h2 className="font-serif text-[2.8rem] font-normal leading-[1.1] tracking-tight mb-4">
-            Vamos construir algo juntos<span className="inline-block w-1.5 h-1.5 rounded-full bg-accent ml-1 animate-pulse"></span>
+            Vamos construir algo juntos<span className="inline-block w-1.5 h-1.5 rounded-full bg-accent ml-1 shadow-[0_0_8px_rgba(34,181,115,0.4)]"></span>
           </h2>
           <p className="text-fg2 text-[14px] leading-relaxed">
             Bruno Oliveira Nunes — Cruz das Almas, BA. Disponível para projetos Full Stack e soluções digitais sob demanda.
@@ -27,7 +27,7 @@ const Contact = () => {
         </div>
         
         <div className="flex flex-col gap-4">
-          <a href="mailto:brunooliveiranunes60@gmail.com" className="group flex items-center gap-4 p-4 bg-bg2 border border-border rounded-lg transition-all hover:border-accent hover:bg-accent-dim">
+          <a href="mailto:brunooliveiranunes60@gmail.com" className="group flex items-center gap-4 p-4 bg-bg2 border border-border rounded-lg transition-[border-color,background-color] duration-200 hover:border-accent hover:bg-accent-dim">
             <div className="w-7 text-center text-accent">
               <Mail className="w-5 h-5 mx-auto" />
             </div>
@@ -35,10 +35,10 @@ const Contact = () => {
               <div className="font-mono text-[11px] text-fg3 uppercase tracking-widest">Email</div>
               <div className="text-[14px] text-fg">brunooliveiranunes60@gmail.com</div>
             </div>
-            <ArrowUpRight className="w-4 h-4 text-fg3 transition-colors group-hover:text-accent" />
+            <ArrowUpRight className="w-4 h-4 text-fg3 transition-colors duration-200 group-hover:text-accent" />
           </a>
 
-          <a href="https://wa.me/5575982976340" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 p-4 bg-bg2 border border-border rounded-lg transition-all hover:border-accent hover:bg-accent-dim">
+          <a href="https://wa.me/5575982976340" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 p-4 bg-bg2 border border-border rounded-lg transition-[border-color,background-color] duration-200 hover:border-accent hover:bg-accent-dim">
             <div className="w-7 text-center text-accent">
               <FaWhatsapp className="w-5 h-5 mx-auto" />
             </div>
@@ -46,10 +46,10 @@ const Contact = () => {
               <div className="font-mono text-[11px] text-fg3 uppercase tracking-widest">WhatsApp</div>
               <div className="text-[14px] text-fg">(75) 9 8297-6340</div>
             </div>
-            <ArrowUpRight className="w-4 h-4 text-fg3 transition-colors group-hover:text-accent" />
+            <ArrowUpRight className="w-4 h-4 text-fg3 transition-colors duration-200 group-hover:text-accent" />
           </a>
           
-          <a href="https://github.com/Bruno-Nunes17" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 p-4 bg-bg2 border border-border rounded-lg transition-all hover:border-accent hover:bg-accent-dim">
+          <a href="https://github.com/Bruno-Nunes17" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 p-4 bg-bg2 border border-border rounded-lg transition-[border-color,background-color] duration-200 hover:border-accent hover:bg-accent-dim">
             <div className="w-7 text-center text-accent">
               <FaGithub className="w-5 h-5 mx-auto" />
             </div>
@@ -57,10 +57,10 @@ const Contact = () => {
               <div className="font-mono text-[11px] text-fg3 uppercase tracking-widest">GitHub</div>
               <div className="text-[14px] text-fg">github.com/Bruno-Nunes17</div>
             </div>
-            <ArrowUpRight className="w-4 h-4 text-fg3 transition-colors group-hover:text-accent" />
+            <ArrowUpRight className="w-4 h-4 text-fg3 transition-colors duration-200 group-hover:text-accent" />
           </a>
           
-          <a href="https://linkedin.com/in/bruno-nunes-591b02179" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 p-4 bg-bg2 border border-border rounded-lg transition-all hover:border-accent hover:bg-accent-dim">
+          <a href="https://linkedin.com/in/bruno-nunes-591b02179" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 p-4 bg-bg2 border border-border rounded-lg transition-[border-color,background-color] duration-200 hover:border-accent hover:bg-accent-dim">
             <div className="w-7 text-center text-accent">
               <FaLinkedinIn className="w-5 h-5 mx-auto" />
             </div>
@@ -68,7 +68,7 @@ const Contact = () => {
               <div className="font-mono text-[11px] text-fg3 uppercase tracking-widest">LinkedIn</div>
               <div className="text-[14px] text-fg">linkedin.com/in/bruno-nunes-591b02179</div>
             </div>
-            <ArrowUpRight className="w-4 h-4 text-fg3 transition-colors group-hover:text-accent" />
+            <ArrowUpRight className="w-4 h-4 text-fg3 transition-colors duration-200 group-hover:text-accent" />
           </a>
         </div>
       </motion.div>
