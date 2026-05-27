@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bg text-fg font-sans text-[15px] leading-relaxed min-h-screen;
+  }
+}
+
+@layer utilities {
+  .hero-grid {
+    background-image:
+      linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 100%);
+  }
+
+  .hero-glow {
+    background: radial-gradient(ellipse, rgba(34,181,115,0.15) 0%, transparent 70%);
+  }
+}
