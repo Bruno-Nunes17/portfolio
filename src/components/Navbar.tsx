@@ -14,6 +14,19 @@ const Navbar = () => {
     { href: "#contact", label: "contato" },
   ];
 
+const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setIsOpen(false);
+    
+    setTimeout(() => {
+      const targetId = href.replace('#', '');
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-[100] bg-bg/80 backdrop-blur-xl border-b border-border/50 px-6 md:px-10 py-4">
       <div className="max-w-[1200px] mx-auto flex items-center justify-between">
@@ -27,6 +40,7 @@ const Navbar = () => {
             <li key={link.href}>
               <a 
                 href={link.href} 
+                onClick={(e) => handleLinkClick(e, link.href)}
                 className="text-fg2 hover:text-fg text-[13px] font-mono transition-colors tracking-tight"
               >
                 {link.label}
@@ -59,7 +73,7 @@ const Navbar = () => {
                 <li key={link.href}>
                   <a 
                     href={link.href} 
-                    onClick={() => setIsOpen(false)}
+                    onClick={(e) => handleLinkClick(e, link.href)}
                     className="block text-fg2 hover:text-accent text-[14px] font-mono transition-colors py-2"
                   >
                     {link.label}
