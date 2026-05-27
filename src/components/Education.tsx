@@ -3,7 +3,7 @@ import { GraduationCap, BookOpen, Languages } from 'lucide-react';
 
 const education = [
   {
-    title: 'Especialização em Análise de Dados e Estatística',
+    title: 'Pós-graduação em Análise de Dados e Estatística',
     institution: 'Em andamento',
     period: 'Atual',
     Icon: GraduationCap,
